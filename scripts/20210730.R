@@ -68,7 +68,7 @@ for (i in unique(df$ENSEMBL_gene_id)){
 #Check how many lncRNAs were selected in the previous step
 output %>% distinct(ENSEMBL_gene_id) %>% nrow()
 
-#Plot heatmap using significance/effect size of each lncRNA 
+#Plot heatmap using significance/effect size of each LncRNA 
 beta<- 
   ggplot(data = output[output$ENSEMBL_gene_id != "ENSG00000229807",], aes(x=.id, y=ENSEMBL_gene_id, fill=MASH.beta)) +
 #ggplot(data = output, aes(x=.id, y=ENSEMBL_gene_id, fill=MASH.beta)) +   #exclude XIST
